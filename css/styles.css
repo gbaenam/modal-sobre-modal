@@ -1,0 +1,99 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+h2 {
+  margin: 0; }
+
+img {
+  width: 100%;
+  height: auto;
+  display: block; }
+
+button {
+  padding: 0;
+  border: none;
+  background: transparent; }
+  button:focus {
+    outline: none; }
+
+p {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+  .wrapper__info {
+    grid-column-start: 2;
+    grid-column-end: 6; }
+  .wrapper__info, .wrapper__image {
+    justify-self: center;
+    align-self: center; }
+  .wrapper__title {
+    font-size: 50px;
+    margin-bottom: 5px; }
+  .wrapper__description {
+    margin-bottom: 30px; }
+  .wrapper__title, .wrapper__description {
+    color: #fff; }
+  .wrapper__button {
+    cursor: pointer;
+    font-size: 16px;
+    color: #283773;
+    padding: 10px 40px;
+    background-color: #fff; }
+    .wrapper__button:hover {
+      color: #fff;
+      background-color: #800080; }
+  .wrapper__image {
+    grid-column-start: 7;
+    grid-column-end: 12; }
+
+.modal {
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__content {
+    width: 35%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center; }
+  .modal__image {
+    width: 60%;
+    margin-bottom: 20px; }
+  .modal__info {
+    text-align: center; }
+  .modal__title {
+    margin-bottom: 5px; }
+  .modal__description {
+    margin-bottom: 30px; }
+  .modal__button {
+    color: #fff;
+    font-size: 16px;
+    padding: 12px 50px;
+    display: inline-block;
+    background-color: #f83b01; }
