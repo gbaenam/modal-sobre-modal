@@ -23,6 +23,7 @@ img {
 button {
     padding: 0;
     border: none;
+    font-size: 16px;
     cursor: pointer;
     background: transparent;
 
@@ -81,9 +82,8 @@ p {
     }
 
     &__button {
-        font-size: 16px;
         color: #283773;
-        padding: 10px 40px;
+        padding: 12px 40px;
         background-color: #fff;
     }
 
@@ -100,7 +100,7 @@ p {
     z-index: 10;
     height: 100%;
     position: fixed;
-    // visibility: hidden;
+    visibility: hidden;
     background-color: rgba(0,0,0,.9);
 
     // Centrando modal__content
@@ -109,7 +109,7 @@ p {
     justify-content: center;
 
     &__content {
-        // transform: translateY(-200%);
+        transform: translateY(-200%);
         width: 35%;
         height: 50%;
         border-radius: 20px;
@@ -141,7 +141,6 @@ p {
 
     &__button {
         color: #fff;
-        font-size: 16px;
         padding: 12px 50px;
         display: inline-block;
         background-color: #f83b01;
