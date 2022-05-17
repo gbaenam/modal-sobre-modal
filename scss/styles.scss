@@ -23,10 +23,16 @@ img {
 button {
     padding: 0;
     border: none;
+    cursor: pointer;
     background: transparent;
 
     &:focus {
         outline: none;
+    }
+
+    &:hover {
+        color: #fff;
+        background-color: #800080;
     }
 }
 
@@ -75,16 +81,10 @@ p {
     }
 
     &__button {
-        cursor: pointer;
         font-size: 16px;
         color: #283773;
         padding: 10px 40px;
         background-color: #fff;
-
-        &:hover {
-            color: #fff;
-            background-color: #800080;
-        }
     }
 
     &__image {

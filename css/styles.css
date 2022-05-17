@@ -19,9 +19,13 @@ img {
 button {
   padding: 0;
   border: none;
+  cursor: pointer;
   background: transparent; }
   button:focus {
     outline: none; }
+  button:hover {
+    color: #fff;
+    background-color: #800080; }
 
 p {
   margin-top: 0;
@@ -50,14 +54,10 @@ p {
   .wrapper__title, .wrapper__description {
     color: #fff; }
   .wrapper__button {
-    cursor: pointer;
     font-size: 16px;
     color: #283773;
     padding: 10px 40px;
     background-color: #fff; }
-    .wrapper__button:hover {
-      color: #fff;
-      background-color: #800080; }
   .wrapper__image {
     grid-column-start: 7;
     grid-column-end: 12; }
