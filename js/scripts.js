@@ -1,6 +1,10 @@
-const modal = document.querySelector('.modal'),
+const openModal = document.querySelector('.wrapper__button'),
+    modal = document.querySelector('.modal'),
     modalContent = modal.querySelector('.modal__content'),
-    openModal = document.querySelector('.wrapper__button')
+    openOtherModal = document.querySelector('.modal__button'),
+    modalNew = document.querySelector('.modalnew'),
+    modalNewContent = document.querySelector('.modalnew__content'),
+    modalNewButton = document.querySelector('.modalnew__button')
 
 
 openModal.addEventListener('click', e => {
@@ -17,4 +21,15 @@ modal.addEventListener('click', e => {
     }
 })
 
+openOtherModal.addEventListener('click', e => {
+    e.stopPropagation()
+    modalNew.style.visibility = 'visible'
+    modalNewContent.classList.add('modalnew__show')
+})
+
+modalNewButton.addEventListener('click', e => {
+    e.stopPropagation()
+    modalNewContent.classList.remove('modalnew__show')
+    modalNew.style.visibility = 'hidden'
+})
 
