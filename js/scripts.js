@@ -7,41 +7,40 @@ const buttonOpenModal = document.getElementById('button-open-modal'),
     buttonCloseOtherModal = document.getElementById('button-close-other-modal')
 
 
-// Función abril primer modal
+// Función abril modal
 const openModal = e => {
     e.stopPropagation()
-    modal.style.visibility = 'visible';
-    modalContent.classList.add('modal__show')
+    if (e.target === buttonOpenModal) {
+        modal.style.visibility = 'visible';
+        modalContent.classList.add('modal__show')
+    } else {
+        modalNew.style.visibility = 'visible'
+        modalNewContent.classList.add('modalnew__show')
+    }
 }
+
 buttonOpenModal.addEventListener('click', openModal)
 
+buttonOpenOtherModal.addEventListener('click', openModal)
 
-// Función cerrar primer modal
+
+// Función cerrar modal
 const closeModal = e => {
     e.stopPropagation()
-    if (e.target.classList.contains('modal') || (e.target.classList.contains('modalnew__button'))) {
+    if (e.target === modal) {
+        modalContent.classList.remove('modal__show')
+        modal.style.visibility = 'hidden'
+    } else {
+        modalNewContent.classList.remove('modalnew__show')
+        modalNew.style.visibility = 'hidden'
+
         modalContent.classList.remove('modal__show')
         modal.style.visibility = 'hidden'
     }
 }
+
 modal.addEventListener('click', closeModal)
 
+buttonCloseOtherModal.addEventListener('click', closeModal)
 
-// Función abrir segundo modal
-const openOtherModal = e => {
-    e.stopPropagation()
-    modalNew.style.visibility = 'visible'
-    modalNewContent.classList.add('modalnew__show')
-}
-buttonOpenOtherModal.addEventListener('click', openOtherModal)
-
-
-// Función cerrar segundo modal
-const closeOtherModal = e => {
-    e.stopPropagation()
-    modalNewContent.classList.remove('modalnew__show')
-    modalNew.style.visibility = 'hidden'
-    closeModal(e)
-}
-buttonCloseOtherModal.addEventListener('click', closeOtherModal)
 

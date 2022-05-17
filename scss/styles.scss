@@ -120,11 +120,11 @@ p {
     }
 
     &__content {
-        transform: translateY(-200%);
         width: 35%;
         height: 50%;
         border-radius: 20px;
         background-color: #fff;
+        transform: translateY(-200%);
 
         // Centrando el contenido
         display: flex;
