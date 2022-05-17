@@ -74,12 +74,21 @@ p {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal::before {
+    top: 50px;
+    content: "x";
+    color: #fff;
+    right: 300px;
+    cursor: pointer;
+    font-size: 80px;
+    position: absolute; }
   .modal__content {
     transform: translateY(-200%);
     width: 35%;
     height: 50%;
     border-radius: 20px;
     background-color: #fff;
+    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -98,3 +107,5 @@ p {
     padding: 12px 50px;
     display: inline-block;
     background-color: #f83b01; }
+  .modal__show {
+    transform: translateY(0); }

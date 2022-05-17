@@ -108,12 +108,25 @@ p {
     align-items: center;
     justify-content: center;
 
+    // Cerrar modal
+    &::before {
+        top: 50px;
+        content: "x";
+        color: #fff;
+        right: 300px;
+        cursor: pointer;
+        font-size: 80px;
+        position: absolute;
+    }
+
     &__content {
         transform: translateY(-200%);
         width: 35%;
         height: 50%;
         border-radius: 20px;
         background-color: #fff;
+
+        position: relative;
 
         // Centrando el contenido
         display: flex;
@@ -144,6 +157,10 @@ p {
         padding: 12px 50px;
         display: inline-block;
         background-color: #f83b01;
+    }
+
+    &__show {
+        transform: translateY(0);
     }
 }
 
