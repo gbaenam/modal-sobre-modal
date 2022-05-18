@@ -27,10 +27,11 @@ buttonOpenOtherModal.addEventListener('click', openModal)
 // Función cerrar modal
 const closeModal = e => {
     e.stopPropagation()
+    console.log(e.target)
     if (e.target === modal) {
         modalContent.classList.remove('modal__show')
         setTimeout(() => modal.style.visibility = 'hidden',1000)
-    } else if (e.target === buttonCloseOtherModal) {
+    } else if (e.target === modalNew || e.target === buttonCloseOtherModal) {
         modalNewContent.classList.remove('modalnew__show')
         setTimeout(() => modalNew.style.visibility = 'hidden',1000)
 
@@ -41,6 +42,6 @@ const closeModal = e => {
 
 modal.addEventListener('click', closeModal)
 
-buttonCloseOtherModal.addEventListener('click', closeModal)
+modalNew.addEventListener('click', closeModal)
 
 
