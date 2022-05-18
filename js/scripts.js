@@ -29,13 +29,13 @@ const closeModal = e => {
     e.stopPropagation()
     if (e.target === modal) {
         modalContent.classList.remove('modal__show')
-        modal.style.visibility = 'hidden'
-    } else {
+        setTimeout(() => modal.style.visibility = 'hidden',1000)
+    } else if (e.target === buttonCloseOtherModal) {
         modalNewContent.classList.remove('modalnew__show')
-        modalNew.style.visibility = 'hidden'
+        setTimeout(() => modalNew.style.visibility = 'hidden',1000)
 
         modalContent.classList.remove('modal__show')
-        modal.style.visibility = 'hidden'
+        setTimeout(() => modal.style.visibility = 'hidden',1500)
     }
 }
 

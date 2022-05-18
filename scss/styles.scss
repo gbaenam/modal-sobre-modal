@@ -124,6 +124,7 @@ p {
         height: 50%;
         border-radius: 20px;
         background-color: #fff;
+        transition: transform 1s;
         transform: translateY(-200%);
 
         // Centrando el contenido
@@ -182,6 +183,7 @@ p {
         height: 50%;
         border-radius: 20px;
         background-color: #fff;
+        transition: transform 1s;
         transform: translateY(-200%);
 
         // Centarndo el contenido
